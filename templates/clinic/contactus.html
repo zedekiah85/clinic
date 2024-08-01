@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>plasma clinic</title>
+
+
+</head>
+
+
+<body>
+
+  {% include "clinic/navbar.html" %}
+  <br><br>
+
+  <center>
+    <h3 class='alert alert-success'>Send Us Your Valuable Feedback !</h3>
+  <div >
+    <form  method="POST">
+      <!-- Very Important csrf Token -->
+      {% csrf_token %}
+      <div>
+        <p>
+        <h3 >{{ form.as_p }}</h3>
+        </p>
+        <br>
+        <input type="submit" value="Send Message" class='btn btn-primary btn-lg'>
+      </div>
+    </form>
+  </center>
+</div>
+  {% include "clinic/footer.html" %}
+</body>
+<!--
+developed By : Ranim-->
+
+
+</html>
